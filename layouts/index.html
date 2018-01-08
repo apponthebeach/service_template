@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
 
     <link rel="stylesheet" href="dist/css/workwell.css">
+    <link rel="stylesheet" href="dist/css/onboarding.css">
 
     <title>Index</title>
 </head>
 <body>
-<script src="dist/index.bundle.js"></script>
+    <div id="home">
+        <img src="/dist/images/logo_splashscreen.png" />
+    </div>
+    <div id="onboarding">
+        <div id="onboarding_img">
+            <img src="/dist/images/onboarding_1.png" style="width:100%" />
+        </div>
+        <div id="onboarding_txt">
+            <div class="onboarding_content title">
+                <label>Bienvenue sur Wellogy</label>
+            </div>
+            <div class="onboarding_content description">
+                <label>Cette version de notre application a été spécialement conçue pour Workwell et vous permet de découvrir quelques uns  de nos exercices de Sophroplogie.</label>
+            </div>
+            <div class="onboarding_content" id="start_button">
+            </div>
+        </div>
+    </div>    
+    <script src="dist/index.bundle.js"></script>
+    <script type="application/javascript">
+        function changePage() {
+            window.setTimeout(function() {
+                var imageToFadeOut = document.getElementById('home');
+                imageToFadeOut.className = imageToFadeOut.className ? '' : 'fadeOut';
+                setTimeout(function () {
+                    imageToFadeOut.className = 'hidden';
+                }, 1000);
+                var imageToFadeIn = document.getElementById('onboarding');
+                imageToFadeIn.className = imageToFadeIn.className ? '' : 'fadeIn';
+            }, 3000);   
+        }
+        changePage();
+    </script>
 </body>
 </html>

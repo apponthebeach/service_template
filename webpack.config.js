@@ -1,8 +1,10 @@
 module.exports = {
     entry: {
         index: "./js/index.js",
-        page1: "./js/page1.js",
-        page2: "./js/page2.js"
+        home: "./js/home.js",
+        video: "./js/video.js",
+        exercices: "./js/exercices.js",
+        article: "./js/article.js"
     },
     output: {
         path: __dirname,

@@ -33,12 +33,22 @@ function getUserInfo(data_) {
 }
 
 function renderUI() {
-    let startButton = Workwell.ui.createButton("COMMENCER L'EXPÉRIENCE");
-    startButton.addClass("onboarding_button");
-    startButton.onClick(function(){
-        Workwell.openWebPage(window.location.href + "../../home");
-    });
-    $("#start_button").append(startButton.toHTMLElement());
+    //Gestion de la barre de navigation
+    var navbar = Workwell.getNavBar();
+    navbar.beginUpdate();
+    navbar.setTitle("Wellogy");
+    navbar.commitUpdate();
+    
+    //UI
+    document.getElementById("home_first_section").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../video");
+    };
+    document.getElementById("home_second_section").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../exercices");
+    };
+    document.getElementById("home_third_section").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../article");
+    };
 }
 
 $(document).ready(function () {

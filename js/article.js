@@ -33,12 +33,7 @@ function getUserInfo(data_) {
 }
 
 function renderUI() {
-    let startButton = Workwell.ui.createButton("COMMENCER L'EXPÉRIENCE");
-    startButton.addClass("onboarding_button");
-    startButton.onClick(function(){
-        Workwell.openWebPage(window.location.href + "../../home");
-    });
-    $("#start_button").append(startButton.toHTMLElement());
+    //UI
 }
 
 $(document).ready(function () {

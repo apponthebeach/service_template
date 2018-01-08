@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wellogy - Workwell - Exercices</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="dist/css/workwell.css">
+        <link rel="stylesheet" href="dist/css/exercices.css">
+    </head>
+    <body>
+        <video controls id="wellogy_video" style="width:0;height:0;z-index:200;display:none;">
+            <source src="https://content.jwplatform.com/manifests/PgVrR5lZ.m3u8" type="video/mp4"/>
+        </video>
+        <div id="exercices">
+            <div id="menu">
+                <div id="menu_first_item" class="selected">
+                    <label>Exercices</label>
+                </div>
+                <div id="menu_second_item">
+                    <label>Programmes</label>
+                </div>
+                <div id="menu_third_item">
+                    <label>Coaching</label>
+                </div>
+            </div>
+            <div id="exercice_section" class="section isShown">
+                <div id="header_cell" class="exercices_cell">
+                    <img src="dist/images/ic_intro_exercices.png"/>
+                    <label>Vos premiers pas dans votre développement personnel</label>
+                </div>
+                <div class="exercices_cell even">
+                    <img src="dist/images/ic_video_white.png"/>
+                    <label>Installation de la Posture</label>
+                </div>
+                <div class="exercices_cell odd">
+                    <img src="dist/images/ic_video_black.png"/>
+                    <label>Respiration Abdominale</label>
+                </div>
+                <div class="exercices_cell even">
+                    <img src="dist/images/ic_video_white.png"/>
+                    <label>Respiration Thoracique</label>
+                </div>
+                <div class="exercices_cell odd">
+                    <img src="dist/images/ic_video_black.png"/>
+                    <label>J'ai du mal à prendre des décisions</label>
+                </div>
+                <div class="exercices_cell even">
+                    <img src="dist/images/ic_video_white.png"/>
+                    <label>Comment se concentrer</label>
+                </div>
+            </div>
+            <div id="programme_section" class="section isHidden">
+                <span style="width:30%;margin:auto 0px auto 0px;text-align: right;">
+                    <img src="./images/play_btn.png" style="height:30px;" />
+                </span>
+                <span style="width:70%;margin:auto 10px;">
+                    <label style="height:75px;">Programme</label>
+                </span>
+            </div>
+            <div id="coaching_section" class="section isHidden">
+                <span style="width:30%;margin:auto 0px auto 0px;text-align: right;">
+                    <img src="./images/play_btn.png" style="height:30px;" />
+                </span>
+                <span style="width:70%;margin:auto 10px;">
+                    <label style="height:75px;">Coaching</label>
+                </span>
+            </div>
+        </div>
+        <script src="dist/exercices.bundle.js"></script>
+    </body>
+    <script type="application/javascript">
+        window.onload = function() {
+            document.getElementById("exercice_section").onclick = function() {
+                var videoPlayer = document.getElementById('wellogy_video');
+                videoPlayer.style.width = "100%";
+                videoPlayer.style.height = "100%";
+                var homeSection = document.getElementById('home');
+                homeSection.style.display = "none";
+            }
+            
+            document.getElementById("menu_first_item").onclick = function() {
+                document.getElementById('menu_first_item').className = 'selected';
+                document.getElementById('menu_second_item').className = 'unselected';
+                document.getElementById('menu_third_item').className = 'unselected';
+                document.getElementById('exercice_section').className = 'section isShown';
+                document.getElementById('programme_section').className = 'section isHidden';
+                document.getElementById('coaching_section').className = 'section isHidden';
+            }
+            
+            document.getElementById("menu_second_item").onclick = function() {
+                document.getElementById('menu_first_item').className = 'unselected';
+                document.getElementById('menu_second_item').className = 'selected';
+                document.getElementById('menu_third_item').className = 'unselected';
+                document.getElementById('exercice_section').className = 'section isHidden';
+                document.getElementById('programme_section').className = 'section isShown';
+                document.getElementById('coaching_section').className = 'section isHidden';
+            }
+            
+            document.getElementById("menu_third_item").onclick = function() {
+                document.getElementById('menu_first_item').className = 'unselected';
+                document.getElementById('menu_second_item').className = 'unselected';
+                document.getElementById('menu_third_item').className = 'selected';
+                document.getElementById('exercice_section').className = 'section isHidden';
+                document.getElementById('programme_section').className = 'section isHidden';
+                document.getElementById('coaching_section').className = 'section isShown';
+            }
+            
+        }
+    </script>
+</html>

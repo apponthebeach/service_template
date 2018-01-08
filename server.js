@@ -4,8 +4,8 @@ const crypto = require('crypto');
 
 const app = express();
 
-const serviceId = 'demo';
-const serviceSecret = 'demosecret';
+const serviceId = 'wellogy';
+const serviceSecret = 'qe9XErbBkWjUh9dNKuzN18wJiwcBSUXC5toYNHJX74bOq3ima4aYaQFheWOO68O697O4d0fZzih26SQGyP7ZQmG3DQOqmfWhPQ8k';
 
 app.use('/dist', express.static(__dirname + '/dist'));
 
@@ -13,12 +13,20 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/layouts/index.html');
 });
 
-app.get('/page_1', function (req, res) {
-    res.sendFile(__dirname + '/layouts/page1.html');
+app.get('/video', function (req, res) {
+    res.sendFile(__dirname + '/layouts/video.html');
 });
 
-app.get('/page_2', function (req, res) {
-    res.sendFile(__dirname + '/layouts/page2.html');
+app.get('/home', function (req, res) {
+    res.sendFile(__dirname + '/layouts/home.html');
+});
+
+app.get('/exercices', function (req, res) {
+    res.sendFile(__dirname + '/layouts/exercices.html');
+});
+
+app.get('/article', function (req, res) {
+    res.sendFile(__dirname + '/layouts/article.html');
 });
 
 app.get('/service_token', function (req, response) {
