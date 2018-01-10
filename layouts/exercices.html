@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="dist/css/workwell.css">
         <link rel="stylesheet" href="dist/css/exercices.css">
+        <link rel="stylesheet" href="dist/css/general.css">
     </head>
     <body>
         <video controls id="wellogy_video" style="width:0;height:0;z-index:200;display:none;">
@@ -50,20 +51,34 @@
                 </div>
             </div>
             <div id="programme_section" class="section isHidden">
-                <span style="width:30%;margin:auto 0px auto 0px;text-align: right;">
-                    <img src="./images/play_btn.png" style="height:30px;" />
-                </span>
-                <span style="width:70%;margin:auto 10px;">
-                    <label style="height:75px;">Programme</label>
-                </span>
+                <div id="programme_disable">
+                    <div class="disable_title">
+                        <label>Cette section n'est pas disponible pour le moment</label>
+                    </div>
+                    <div class="disable_line">
+                        &nbsp;
+                    </div>
+                    <div class="disable_description">
+                        <label>Faites découvrir l’application dans votre entreprise. <b>Les collaborateurs des entreprises « Partenaires Wellogy » peuvent d’accéder à toutes les fonctionnalités !</b></label>
+                    </div>
+                    <div class="disable_share" id="program_share">
+                    </div>
+                </div>
             </div>
             <div id="coaching_section" class="section isHidden">
-                <span style="width:30%;margin:auto 0px auto 0px;text-align: right;">
-                    <img src="./images/play_btn.png" style="height:30px;" />
-                </span>
-                <span style="width:70%;margin:auto 10px;">
-                    <label style="height:75px;">Coaching</label>
-                </span>
+                <div id="coaching_disable">
+                    <div class="disable_title">
+                        <label>Cette section n'est pas disponible pour le moment</label>
+                    </div>
+                    <div class="disable_line">
+                        &nbsp;
+                    </div>
+                    <div class="disable_description">
+                        <label>Faites découvrir l’application dans votre entreprise. <b>Les collaborateurs des entreprises « Partenaires Wellogy » peuvent d’accéder à toutes les fonctionnalités !</b></label>
+                    </div>
+                    <div class="disable_share" id="coaching_share">
+                    </div>
+                </div>
             </div>
         </div>
         <script src="dist/exercices.bundle.js"></script>

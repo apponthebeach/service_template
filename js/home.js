@@ -34,10 +34,13 @@ function getUserInfo(data_) {
 
 function renderUI() {
     //Gestion de la barre de navigation
-    var navbar = Workwell.getNavBar();
-    navbar.beginUpdate();
-    navbar.setTitle("Wellogy");
-    navbar.commitUpdate();
+    var aNavBar = Workwell.getNavBar();
+    aNavBar.beginUpdate();
+    aNavBar.setTitle("Wellogy");
+    aNavBar.setTextColor("#444444");
+    aNavBar.setBackgroundColor("#FFFFFF");
+    aNavBar.commitUpdate();
+    
     
     //UI
     document.getElementById("home_first_section").onclick = function() {

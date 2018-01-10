@@ -17894,6 +17894,20 @@ function getUserInfo(data_) {
 
 function renderUI() {
     //UI
+    let sharingProgramButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
+    sharingProgramButton.addClass("onboarding_button");
+    sharingProgramButton.onClick(function(){
+        //Partage avec email
+        window.location.href("mailto:axeldesaintemarie@gmail.com");
+    });
+    $("#program_share").append(sharingProgramButton.toHTMLElement());
+    let sharingCoachingButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
+    sharingCoachingButton.addClass("onboarding_button");
+    sharingCoachingButton.onClick(function(){
+        //Partage avec email
+        window.location.href("mailto:axeldesaintemarie@gmail.com");
+    });
+    $("#coaching_share").append(sharingCoachingButton.toHTMLElement());
 }
 
 $(document).ready(function () {

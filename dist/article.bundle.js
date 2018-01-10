@@ -17895,6 +17895,13 @@ function getUserInfo(data_) {
 
 function renderUI() {
     //UI
+    let sharingProgramButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
+    sharingProgramButton.addClass("onboarding_button");
+    sharingProgramButton.onClick(function(){
+        //Partage avec email
+        window.location.href("mailto:axeldesaintemarie@gmail.com");
+    });
+    $("#sharing_content").append(sharingProgramButton.toHTMLElement());
 }
 
 $(document).ready(function () {
