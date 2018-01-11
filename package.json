@@ -1,5 +1,4 @@
 {
-  "main": "js/index.js",
   "name": "service-template",
   "dependencies": {
     "express": "^4.16.2",
