@@ -21,7 +21,6 @@ function getUserInfo(data_) {
     return new Promise(function (resolve, reject) {
         Workwell.getUserInfo({
             success: function (res) {
-                window.alert(res.user.email);
                 console.log("success get user info");   
                 resolve(res);
             },
@@ -49,7 +48,7 @@ function renderUI() {
         Workwell.getUserInfo({
             success: function (userData) {
                 //Partage avec email
-                var data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail=axeldesaintemarie@gmail.com&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
+                var data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail='+userData.data.email+'&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
                 $.ajax({
 	               type: "POST",
 	               url: "https://aotb.xyz/wellogy/site/inc/shareTheApp.php",
@@ -94,7 +93,6 @@ function renderUI() {
 
 $(document).ready(function () {
     getServiceToken()
-        .then(getUserInfo)
         .then(renderUI)
         .catch(function (error) {
             console.log(error);
