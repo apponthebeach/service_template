@@ -17906,43 +17906,54 @@ function renderUI() {
     sharingCoachingButton.onClick(function(){
         //Récupération des infos utilisateurs
         Workwell.getUserInfo({
-            success: function (data) {
-                alerte(data);
-                // You can then create a new user with the data you received,
-                // or fetch an existing one in your db
+            success: function (userData) {
+                //Partage avec email
+                var data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail=axeldesaintemarie@gmail.com&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
+                $.ajax({
+	               type: "POST",
+	               url: "https://aotb.xyz/wellogy/site/inc/shareTheApp.php",
+	               data: data,
+	               success: function(msg) {
+                        // Message was sent
+                        if (msg == 'OK') {
+                            alert("Message envoyé");
+                        }
+                        // There was an error
+                        else {
+                            alert("Erreur lors de l'envoie du message"); 
+                        }
+                   }
+                });
             },
             error: function (error) {
-                alerte(error);
+                //Partage avec email
+                var data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail=axeldesaintemarie@gmail.com&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
+                $.ajax({
+	               type: "POST",
+	               url: "https://aotb.xyz/wellogy/site/inc/shareTheApp.php",
+	               data: data,
+	               success: function(msg) {
+                        // Message was sent
+                        if (msg == 'OK') {
+                            alert("Message envoyé");
+                        }
+                        // There was an error
+                        else {
+                            alert("Erreur lors de l'envoie du message"); 
+                        }
+                   }
+                });
             }
         });
         
-        //Partage avec email
-        var data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail=axeldesaintemarie@gmail.com&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
-        console.log(data);
-        $.ajax({
-	      type: "POST",
-	      url: "https://aotb.xyz/wellogy/site/inc/shareTheApp.php",
-	      data: data,
-	      success: function(msg) {
-
-            // Message was sent
-            if (msg == 'OK') {
-               console.log("OK"); 
-            }
-            // There was an error
-            else {
-               console.log("error : "+msg); 
-            }
-
-	      }
-
-      });
+        
     });
     $("#coaching_share").append(sharingCoachingButton.toHTMLElement());
 }
 
 $(document).ready(function () {
     getServiceToken()
+        .then(getUserInfo)
         .then(renderUI)
         .catch(function (error) {
             console.log(error);
