@@ -17916,11 +17916,11 @@ function renderUI() {
 	               success: function(msg) {
                         // Message was sent
                         if (msg == 'OK') {
-                            alert("Message envoyé");
+                            window.alert("Message envoyé");
                         }
                         // There was an error
                         else {
-                            alert("Erreur lors de l'envoie du message"); 
+                            window.alert("Erreur lors de l'envoie du message"); 
                         }
                    }
                 });
@@ -17935,11 +17935,11 @@ function renderUI() {
 	               success: function(msg) {
                         // Message was sent
                         if (msg == 'OK') {
-                            alert("Message envoyé");
+                            window.alert("Message envoyé");
                         }
                         // There was an error
                         else {
-                            alert("Erreur lors de l'envoie du message"); 
+                            window.alert("Erreur lors de l'envoie du message"); 
                         }
                    }
                 });
