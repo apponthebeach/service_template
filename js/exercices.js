@@ -21,7 +21,7 @@ function getUserInfo(data_) {
     return new Promise(function (resolve, reject) {
         Workwell.getUserInfo({
             success: function (res) {
-                window.alert(res.user);
+                window.alert(res.user.email);
                 console.log("success get user info");   
                 resolve(res);
             },
