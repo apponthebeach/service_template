@@ -47,12 +47,12 @@ function renderUI() {
         //Récupération des infos utilisateurs
         Workwell.getUserInfo({
             success: function (data) {
-                alerte(data);
+                alert(data);
                 // You can then create a new user with the data you received,
                 // or fetch an existing one in your db
             },
             error: function (error) {
-                alerte(error);
+                alert(error);
             }
         });
         
