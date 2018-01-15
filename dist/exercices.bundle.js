@@ -17905,8 +17905,17 @@ function renderUI() {
     sharingCoachingButton.addClass("onboarding_button");
     sharingCoachingButton.onClick(function(){
         //Récupération des infos utilisateurs
-        var test = getUserInfo;
-        alert(test);
+        Workwell.getUserInfo({
+            success: function (data) {
+                alerte(data);
+                // You can then create a new user with the data you received,
+                // or fetch an existing one in your db
+            },
+            error: function (error) {
+                alerte(error);
+            }
+        });
+        
         //Partage avec email
         var data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail=axeldesaintemarie@gmail.com&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
         console.log(data);
