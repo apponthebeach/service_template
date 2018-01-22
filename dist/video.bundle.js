@@ -17909,9 +17909,10 @@ function renderUI() {
     //UI
     var videoId = getParameterByName('vId');
     //Construction de la balise video
-    $("#videoPlayer").append('<video controls id="wellogy_video" style="width:100%;height:100%;z-index:200;" allowfullscreen="true" poster="http://content.jwplatform.com/thumbs/'+videoId+'-720.jpg">');
-    $("#videoPlayer").append('<source src="http://content.jwplatform.com/videos/'+videoId+'-uFyc9y2v.mp4" type="video/mp4"/>');
-    $("#videoPlayer").append('</video>');
+    var videoTag = '<video controls id="wellogy_video" style="width:100%;height:100%;z-index:200;" allowfullscreen="true" poster="http://content.jwplatform.com/thumbs/'+videoId+'-720.jpg">';
+    videoTag = videoTag + '<source src="https://content.jwplatform.com/manifests/'+videoId+'.m3u8" type="video/mp4"/>';
+    videoTag = videoTag + '</video>';
+    $("#videoPlayer").append(videoTag);
 }
 
 $(document).ready(function () {
