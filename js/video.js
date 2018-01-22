@@ -51,7 +51,7 @@ function renderUI() {
     var videoId = getParameterByName('vId');
     //Construction de la balise video
     $("#videoPlayer").append('<video controls id="wellogy_video" style="width:100%;height:100%;z-index:200;" allowfullscreen="true" poster="http://content.jwplatform.com/thumbs/'+videoId+'-720.jpg">');
-    $("#videoPlayer").append('<source src="https://content.jwplatform.com/manifests/'+videoId+'.m3u8" type="application/x-mpegURL"/>');
+    $("#videoPlayer").append('<source src="http://content.jwplatform.com/videos/'+videoId+'-uFyc9y2v.mp4" type="video/mp4"/>');
     $("#videoPlayer").append('</video>');
 }
 
