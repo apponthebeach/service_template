@@ -17862,6 +17862,20 @@ return jQuery;
 var Workwell = __webpack_require__(13);
 var $ = __webpack_require__(27);
 
+//Récupération de la valeur d'un paramètre en fonction de son nom dans une URL précise
+function getParameterByName(aName, aUrl) {
+    //S'il n'y a pas de variable aUrl définie, on la redéfinie avec l'URL du navigateur
+    if (!aUrl) {
+        aUrl = window.location.href;
+    }
+    aName = aName.replace(/[\[\]]/g,"\\$&");
+    var regex = new RegExp("[?&]"+aName+"(=([^&#]*)|&|#|$)");
+    var results = regex.exec(aUrl);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 function getServiceToken() {
     return $.ajax({
         type: 'GET',
@@ -17878,23 +17892,10 @@ function getServiceToken() {
     });
 }
 
-function getUserInfo(data_) {
-    return new Promise(function (resolve, reject) {
-        Workwell.getUserInfo({
-            success: function (res) {
-                console.log("success get user info");   
-                resolve(res);
-            },
-            error: function (data) {
-                console.log("error get user info");
-                reject(data);
-            }
-        });
-    });
-}
-
 function renderUI() {
     //UI
+    var articleId = getParameterByName('aId');
+    
     let sharingProgramButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
     sharingProgramButton.addClass("onboarding_button");
     sharingProgramButton.onClick(function(){

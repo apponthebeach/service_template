@@ -17908,7 +17908,7 @@ function renderUI() {
         Workwell.openWebPage(window.location.href + "../../exercices");
     };
     document.getElementById("home_third_section").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../article");
+        Workwell.openWebPage(window.location.href + "../../article?aId=0");
     };
 }
 

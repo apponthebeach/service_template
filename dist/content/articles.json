@@ -1,0 +1,32 @@
+[
+  {
+    "i": {
+      "t": "img",
+      "url": "/images/img_article.png"
+    },
+    "id": "0",
+    "t": "L'appli et les services Wellogy",
+    "c": "Wellogy propose une application ainsi que des services de Sophrologie et autres disciplines en faveur du bien être en entreprise",
+    "a": [
+      {
+        "t": "text",
+        "c": "\"En attente de texte\""
+      }
+    ]
+  },
+  {
+    "i": {
+      "t": "img",
+      "url": "/images/img_article.png"
+    },
+    "id": "1",
+    "t": "Qu'est-ce que Wellogy ?",
+    "c": "Wellogy propose une application ainsi que des services de Sophrologie et autres disciplines en faveur du bien être en entreprise",
+    "a": [
+      {
+        "t": "text",
+        "c": "\"En attente de texte\""
+      }
+    ]
+  }
+]
