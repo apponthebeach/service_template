@@ -36,6 +36,26 @@ function getUserInfo(data_) {
 
 function renderUI() {
     //UI
+    
+    //Gestion des videos
+    document.getElementById("first_video").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../video?vId=9TXPnBA7");
+    };
+    document.getElementById("second_video").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../video?vId=asZwKFXK");
+    };
+    document.getElementById("third_video").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../video?vId=6yS40hC6");
+    };
+    document.getElementById("fourth_video").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../video?vId=E3ufSerK");
+    };
+    document.getElementById("fifth_video").onclick = function() {
+        Workwell.openWebPage(window.location.href + "../../video?vId=3L9PTYmJ");
+    };
+    
+    
+    //Gestion du bouton partager
     let sharingProgramButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
     sharingProgramButton.addClass("onboarding_button");
     sharingProgramButton.onClick(function(){

@@ -44,7 +44,7 @@ function renderUI() {
     
     //UI
     document.getElementById("home_first_section").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video");
+        Workwell.openWebPage(window.location.href + "../../video?vId=PgVrR5lZ");
     };
     document.getElementById("home_second_section").onclick = function() {
         Workwell.openWebPage(window.location.href + "../../exercices");
