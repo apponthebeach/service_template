@@ -17897,15 +17897,20 @@ function renderUI() {
     var articleId = getParameterByName('aId');
     
     $.getJSON( "../dist/content/articles.json", function( data ) {
-        var items = [];
+        var article_content = "";
+        
         $.each( data, function( key, val ) {
-            items.push( "<li>" + val.t + "</li>" );
+            if (val.id === articleId) {
+                article_content = article_content + "<div id='article_header'>";
+                article_content = article_content + "<label>"+val.t+"</label>";
+                article_content = article_content + "</div>";
+                article_content = article_content + "<div id='article_description'>";
+                article_content = article_content + "<label>"+val.c+"</label>";
+                article_content = article_content + "</div>";
+            }
         });
  
-        $( "<ul/>", {
-            "class": "my-new-list",
-            html: items.join( "" )
-        }).appendTo( "#test" );
+        $(article_content).appendTo("#footer");
     });
     
     let sharingProgramButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
