@@ -17899,9 +17899,7 @@ function renderUI() {
     $.getJSON( "../dist/content/articles.json", function( data ) {
         var items = [];
         $.each( data, function( key, val ) {
-            $.each( val, function( keyOne, valOne ) {
-                val.push( "<li id='" + key + "'>" + val + "</li>" );
-            });
+            items.push( "<li>" + val.t + "</li>" );
         });
  
         $( "<ul/>", {
