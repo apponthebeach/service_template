@@ -29,6 +29,10 @@ app.get('/article', function (req, res) {
     res.sendFile(__dirname + '/layouts/article.html');
 });
 
+app.get('/partage', function (req, res) {
+    res.sendFile(__dirname + '/layouts/partage.html');
+});
+
 app.get('/service_token', function (req, response) {
     // the time needs to be in seconds
     var now = parseInt(new Date().getTime() / 1000);

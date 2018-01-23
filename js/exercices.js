@@ -60,42 +60,18 @@ function renderUI() {
     sharingProgramButton.addClass("onboarding_button");
     sharingProgramButton.onClick(function(){
         //Partage avec email
-        window.location.href("mailto:axeldesaintemarie@gmail.com");
+        Workwell.openWebPage(window.location.href + "../../partager");
     });
     $("#program_share").append(sharingProgramButton.toHTMLElement());
     let sharingCoachingButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
     sharingCoachingButton.addClass("onboarding_button");
     sharingCoachingButton.onClick(function(){
-        //Partage avec email
-        var data;
-        if (window.localStorage.userEmail === "") {
-            data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail=axeldesaintemarie@gmail.com&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
-        } else {
-            data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname='+window.localStorage.userFirstName+'&contactName='+window.localStorage.userLastName+'&contactEmail='+window.localStorage.userEmail+'&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
-        }
-
-        $.ajax({
-	       type: "POST",
-	       url: "https://aotb.xyz/wellogy/site/inc/shareTheApp.php",
-	       data: data,
-	       success: function(msg) {
-                // Message was sent
-                if (msg == 'OK') {
-                    window.alert("Message envoyé");
-                }
-                // There was an error
-                else {
-                    window.alert("Erreur lors de l'envoie du message"); 
-                }
-            }
-        });
+        Workwell.openWebPage(window.location.href + "../../partager");
     });
-    $("#coaching_share").append(sharingCoachingButton.toHTMLElement());
 }
 
 $(document).ready(function () {
     getServiceToken()
-        .then(getUserInfo)
         .then(renderUI)
         .catch(function (error) {
             console.log(error);

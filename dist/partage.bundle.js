@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 31);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -17855,11 +17855,27 @@ return jQuery;
 /* 28 */,
 /* 29 */,
 /* 30 */,
-/* 31 */
+/* 31 */,
+/* 32 */,
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Workwell = __webpack_require__(13);
 var $ = __webpack_require__(27);
+
+//Récupération de la valeur d'un paramètre en fonction de son nom dans une URL précise
+function getParameterByName(aName, aUrl) {
+    //S'il n'y a pas de variable aUrl définie, on la redéfinie avec l'URL du navigateur
+    if (!aUrl) {
+        aUrl = window.location.href;
+    }
+    aName = aName.replace(/[\[\]]/g,"\\$&");
+    var regex = new RegExp("[?&]"+aName+"(=([^&#]*)|&|#|$)");
+    var results = regex.exec(aUrl);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
 function getServiceToken() {
     return $.ajax({
@@ -17896,42 +17912,41 @@ function getUserInfo(data_) {
 
 function renderUI() {
     //UI
+    var shareId = getParameterByName('sId');
     
-    //Gestion des videos
-    document.getElementById("first_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=9TXPnBA7");
-    };
-    document.getElementById("second_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=asZwKFXK");
-    };
-    document.getElementById("third_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=6yS40hC6");
-    };
-    document.getElementById("fourth_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=E3ufSerK");
-    };
-    document.getElementById("fifth_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=3L9PTYmJ");
-    };
-    
-    
-    //Gestion du bouton partager
-    let sharingProgramButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
-    sharingProgramButton.addClass("onboarding_button");
-    sharingProgramButton.onClick(function(){
-        //Partage avec email
-        Workwell.openWebPage(window.location.href + "../../partager");
-    });
-    $("#program_share").append(sharingProgramButton.toHTMLElement());
-    let sharingCoachingButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
+    let sharingCoachingButton = Workwell.ui.createButton("ENVOYER L'EMAIL");
     sharingCoachingButton.addClass("onboarding_button");
     sharingCoachingButton.onClick(function(){
-        Workwell.openWebPage(window.location.href + "../../partager");
+        //Partage avec email
+        var data;
+        if (window.localStorage.userEmail === "") {
+            data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname=AXEL&contactName=de%20Sainte%20Marie&contactEmail=axeldesaintemarie@gmail.com&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
+        } else {
+            data ='&recipientEmail=axel@wellogy.fr&companyName=LALALA&contactFirstname='+window.localStorage.userFirstName+'&contactName='+window.localStorage.userLastName+'&contactEmail='+window.localStorage.userEmail+'&contactSubject=WHAT%20A%20GREAT%20APP&contactMessage=THIS%20IS%20THE%20COOLEST%20APP%20IN%20THE%20WORLD';
+        }
+
+        $.ajax({
+	       type: "POST",
+	       url: "https://aotb.xyz/wellogy/site/inc/shareTheApp.php",
+	       data: data,
+	       success: function(msg) {
+                // Message was sent
+                if (msg == 'OK') {
+                    window.alert("Message envoyé");
+                }
+                // There was an error
+                else {
+                    window.alert("Erreur lors de l'envoie du message"); 
+                }
+            }
+        });
     });
+    $("#partage_button").append(sharingCoachingButton.toHTMLElement());
 }
 
 $(document).ready(function () {
     getServiceToken()
+        .then(getUserInfo)
         .then(renderUI)
         .catch(function (error) {
             console.log(error);

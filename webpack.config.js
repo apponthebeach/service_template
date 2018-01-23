@@ -4,7 +4,8 @@ module.exports = {
         home: "./js/home.js",
         video: "./js/video.js",
         exercices: "./js/exercices.js",
-        article: "./js/article.js"
+        article: "./js/article.js",
+        partage: "./js/partage.js"
     },
     output: {
         path: __dirname,
