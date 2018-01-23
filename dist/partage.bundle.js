@@ -17913,8 +17913,7 @@ function getUserInfo(data_) {
 function renderUI() {
     //UI
     var shareId = getParameterByName('sId');
-    
-    if (shareId == "1") {
+    if (shareId == 1) {
         $("<label>À qui souhaitez-vous partager l’article ?</label>").appendTo("#partage_title");
         $("<label>Texte partagé : </label><TextArea>L’appli et les services Wellogy https://workwell/article…. Téléchargez l'application Wellogy : https://play.google.com/wellogy</TextArea>").appendTo("#partage_body");
         
@@ -17955,7 +17954,7 @@ function renderUI() {
 
 $(document).ready(function () {
     getServiceToken()
-        .then(getUserInfo)
+        .then(getParameterByName)
         .then(renderUI)
         .catch(function (error) {
             console.log(error);
