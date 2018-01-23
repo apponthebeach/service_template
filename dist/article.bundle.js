@@ -17917,7 +17917,7 @@ function renderUI() {
     sharingProgramButton.addClass("onboarding_button");
     sharingProgramButton.onClick(function(){
         //Partage avec email
-        window.location.href("mailto:axeldesaintemarie@gmail.com");
+        Workwell.openWebPage(window.location.href + "../../partage?sId=1");
     });
     $("#sharing_content").append(sharingProgramButton.toHTMLElement());
 }

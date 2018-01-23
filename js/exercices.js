@@ -60,15 +60,15 @@ function renderUI() {
     sharingProgramButton.addClass("onboarding_button");
     sharingProgramButton.onClick(function(){
         //Partage avec email
-        Workwell.openWebPage(window.location.href + "../../partage");
+        Workwell.openWebPage(window.location.href + "../../partage?sId=0");
     });
     $("#program_share").append(sharingProgramButton.toHTMLElement());
     let sharingCoachingButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
     sharingCoachingButton.addClass("onboarding_button");
     sharingCoachingButton.onClick(function(){
-        Workwell.openWebPage(window.location.href + "../../partage");
+        Workwell.openWebPage(window.location.href + "../../partage?sId=0");
     });
-    $("#coaching_share").append(sharingProgramButton.toHTMLElement());
+    $("#coaching_share").append(sharingCoachingButton.toHTMLElement());
 }
 
 $(document).ready(function () {

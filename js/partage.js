@@ -52,6 +52,15 @@ function renderUI() {
     //UI
     var shareId = getParameterByName('sId');
     
+    if (shareId === 1) {
+        $("<label>À qui souhaitez-vous partager l’article ?</label>").appendTo("#partage_title");
+        $("<label>Texte partagé : </label><TextArea>L’appli et les services Wellogy https://workwell/article…. Téléchargez l'application Wellogy : https://play.google.com/wellogy</TextArea>").appendTo("#partage_body");
+        
+    } else {
+        $("<label>À qui souhaitez-vous partager l’application Wellogy ?</label>").appendTo("#partage_title");
+        $("<label>Texte partagé : </label><TextArea>Wellogy, l’application de Sophrologie et de bien-être qui vous accompagne au quotidien. Téléchargez l'application Wellogy : https://play.google.com/wellogy</TextArea>").appendTo("#partage_body");
+    }
+    
     let sharingCoachingButton = Workwell.ui.createButton("ENVOYER L'EMAIL");
     sharingCoachingButton.addClass("onboarding_button");
     sharingCoachingButton.onClick(function(){
