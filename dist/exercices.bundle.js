@@ -17920,14 +17920,15 @@ function renderUI() {
     sharingProgramButton.addClass("onboarding_button");
     sharingProgramButton.onClick(function(){
         //Partage avec email
-        Workwell.openWebPage(window.location.href + "../../partager");
+        Workwell.openWebPage(window.location.href + "../../partage");
     });
     $("#program_share").append(sharingProgramButton.toHTMLElement());
     let sharingCoachingButton = Workwell.ui.createButton("PARTAGER WELLOGY !");
     sharingCoachingButton.addClass("onboarding_button");
     sharingCoachingButton.onClick(function(){
-        Workwell.openWebPage(window.location.href + "../../partager");
+        Workwell.openWebPage(window.location.href + "../../partage");
     });
+    $("#coaching_share").append(sharingProgramButton.toHTMLElement());
 }
 
 $(document).ready(function () {
