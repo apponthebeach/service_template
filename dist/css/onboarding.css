@@ -1,4 +1,4 @@
-#home { 
+#index { 
     background: url(../images/bg_splashscreen.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -14,16 +14,16 @@
     flex-direction: column;
 }
 
-#home.fadeOut {
+#index.fadeOut {
     opacity: 1.0;
 }
             
-#home.hidden {
+#index.hidden {
     opacity: 1.0;
     display:none;
 }
             
-#home img { 
+#index img { 
     margin: auto;
     width: 91px;
     height: 80px;
