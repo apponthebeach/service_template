@@ -26,7 +26,7 @@ function changePage() {
         }, 1000);
         var imageToFadeIn = document.getElementById('onboarding');
         imageToFadeIn.className = imageToFadeIn.className ? '' : 'fadeIn';
-    }, 3000);   
+    }, 1000);   
 }
 
 function renderUI() {
