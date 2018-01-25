@@ -17,8 +17,9 @@
 
 #home_first_section label {
     color: #FFFFFF;
-    font-weight: 500;
     font-size: 16px;
+    font-family: 'Wellogy-Medium';
+    cursor: pointer;
 }
             
 #home_second_section {
@@ -28,12 +29,13 @@
     height: 110px;
     border-radius: 5px;
     border: solid 0px #e5e5e5;
+    cursor: pointer;
 }
 
 #home_second_section label {
     color:#FFFFFF;
     font-size: 23px;
-    font-weight: 500;
+    font-family: 'Wellogy-Medium';
     cursor: pointer;
 }
             
@@ -53,6 +55,7 @@
     border-radius: 5px 5px 0px 0px;
     height: 170px;
     width: 100%;
+    cursor: pointer;
 }
             
 #home_third_section #footer {
@@ -74,7 +77,8 @@
     margin: 0px 0px 0px 10px;
     color: #545f6f;
     font-size: 16px;
-    font-weight: 500;
+    font-family: 'Wellogy-Medium';
+    cursor: pointer;
 }
             
 #home_third_section #footer #article_description {
@@ -84,7 +88,7 @@
 #home_third_section #footer #article_description label {
     color: #5e5e69;
     font-size: 14px;
-    font-weight: normal;
+    font-family: 'Wellogy-Regular';
     display: block;
 }
             

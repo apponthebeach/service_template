@@ -44,12 +44,12 @@
 }
             
 .unselected {
-    font-weight: normal; 
+    font-family: 'Wellogy-Regular';
     background-color: #ffffff;
 }
             
 .selected {
-    font-weight: bold;
+    font-family: 'Wellogy-Bold';
     border-bottom: 3px #f6479b solid;
     background-color: #ffffff;
 }
@@ -84,7 +84,7 @@
 
 .exercices_cell label {
     font-size: 16px;
-    font-weight: 600;
+    font-family: 'Wellogy-Bold';
     margin: auto 10px auto 15px;
 }
 
@@ -103,6 +103,7 @@
     color: #545f6f;
     font-size: 16px;
     text-align: center;
+    font-family: 'Wellogy-Regular';
 }
 
 .odd {
@@ -145,7 +146,7 @@
 }
 
 .disable_title label {
-    font-weight: normal;
+    font-family: 'Wellogy-Medium';
     font-size: 20px;
     color: #6a78ff;
 }
@@ -163,7 +164,7 @@
 }
 
 .disable_description label {
-    font-weight: normal;
+    font-family: 'Wellogy-Regular';
     font-size: 15px;
     color: #adadb9;
 }

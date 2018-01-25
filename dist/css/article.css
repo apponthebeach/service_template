@@ -32,7 +32,7 @@
             #home_third_section #footer #article_header label {
                 color: #545f6f;
                 font-size: 28px;
-                font-weight: 500;
+                font-family: 'Wellogy-Bold';
                 margin: 0px;
                 display: block;
             }
@@ -46,7 +46,7 @@
             #home_third_section #footer #article_description label {
                 color: #5e5e69;
                 font-size: 14px;
-                font-weight: normal;
+                font-family: 'Wellogy-Regular';
                 margin: 0px;
                 display: block;
             }
