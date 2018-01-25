@@ -17874,19 +17874,16 @@ function getServiceToken() {
     });
 }
 
-function getUserInfo(data_) {
-    return new Promise(function (resolve, reject) {
-        Workwell.getUserInfo({
-            success: function (res) {
-                console.log("success get user info");   
-                resolve(res);
-            },
-            error: function (data) {
-                console.log("error get user info");
-                reject(data);
-            }
-        });
-    });
+function changePage() {
+    window.setTimeout(function() {
+        var imageToFadeOut = document.getElementById('home');
+        imageToFadeOut.className = imageToFadeOut.className ? '' : 'fadeOut';
+        setTimeout(function () {
+            imageToFadeOut.className = 'hidden';
+        }, 1000);
+        var imageToFadeIn = document.getElementById('onboarding');
+        imageToFadeIn.className = imageToFadeIn.className ? '' : 'fadeIn';
+    }, 3000);   
 }
 
 function renderUI() {
@@ -17901,6 +17898,7 @@ function renderUI() {
 $(document).ready(function () {
     getServiceToken()
         .then(renderUI)
+        .then(changePage)
         .catch(function (error) {
             console.log(error);
         });
