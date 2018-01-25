@@ -1,12 +1,26 @@
-@font-face {
-    font-family: "workwell-font";
-    src: url("../fonts/workwell-font.eot");
-    src: url("../fonts/workwell-font.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/workwell-font.woff") format("woff"),
-    url("../fonts/workwell-font.ttf") format("truetype"),
-    url("../fonts/workwell-font.svg#workwell-font") format("svg");
-    font-weight: normal;
-    font-style: normal;
+/* Déclaration des polices maisons utilisées dans le site */
+@font-face 
+{
+   font-family: 'DIN-Bold';
+   src: url(../fonts/FF_DIN_Bold.otf)format('truetype');
+}
+
+@font-face 
+{
+   font-family: 'DIN-Light';
+   src: url(../fonts/FF_DIN_Light.otf)format('truetype');
+}
+
+@font-face 
+{
+   font-family: 'DIN-Regular';
+   src: url(../fonts/FF_DIN_Regular.otf)format('truetype');
+}
+
+@font-face 
+{
+   font-family: 'DIN-Medium';
+   src: url(../fonts/FF_DIN_Medium.otf)format('truetype');
 }
 
 html, body {
@@ -14,7 +28,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "workwell-font";
+    font-family: 'DIN-Regular';
 }
             
 .onboarding_button {
