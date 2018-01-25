@@ -8,18 +8,18 @@
     height: 100%;
     margin: 0; 
     padding: 0;            
-    opacity:1;
+    opacity: 1.0;
     transition: opacity 1s; 
     display: flex;
     flex-direction: column;
 }
 
 #home.fadeOut {
-    opacity: 0;
+    opacity: 1.0;
 }
             
 #home.hidden {
-    opacity: 0;
+    opacity: 1.0;
     display:none;
 }
             
@@ -39,7 +39,7 @@
 }
 
 #onboarding.fadeIn {
-    opacity: 1;
+    opacity: 1.0;
 }
             
 #onboarding_txt {
