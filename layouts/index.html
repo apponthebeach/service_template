@@ -30,19 +30,5 @@
         </div>
     </div>    
     <script src="dist/index.bundle.js"></script>
-    <script type="application/javascript">
-        function changePage() {
-            window.setTimeout(function() {
-                var imageToFadeOut = document.getElementById('home');
-                imageToFadeOut.className = imageToFadeOut.className ? '' : 'fadeOut';
-                setTimeout(function () {
-                    imageToFadeOut.className = 'hidden';
-                }, 1000);
-                var imageToFadeIn = document.getElementById('onboarding');
-                imageToFadeIn.className = imageToFadeIn.className ? '' : 'fadeIn';
-            }, 3000);   
-        }
-        changePage();
-    </script>
 </body>
 </html>
