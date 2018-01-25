@@ -21,11 +21,22 @@
     opacity: 1.0;
     display:none;
 }
-            
-#index img { 
+
+#index img.under
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:-1;
+}
+
+#index img.over
+{
+    position:absolute;
     margin: auto;
-    width: 100%;
-    height: 100%;
+    width: 91px;
+    height: 80px;
+    z-index:-1;
 }
             
 #onboarding {
