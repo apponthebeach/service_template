@@ -17876,7 +17876,7 @@ function getServiceToken() {
 
 function changePage() {
     window.setTimeout(function() {
-        var imageToFadeOut = document.getElementById('home');
+        var imageToFadeOut = document.getElementById('index');
         imageToFadeOut.className = imageToFadeOut.className ? '' : 'fadeOut';
         setTimeout(function () {
             imageToFadeOut.className = 'hidden';
