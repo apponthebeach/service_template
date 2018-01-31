@@ -44,8 +44,12 @@
             }
 
             #home_third_section #footer #article_description label div {
-                margin: 10px 0px 0px 0px;
+                margin: 20px 0px 0px 0px;
             }
+
+            #home_third_section #footer #article_description label div li {
+                margin: 10px 0px 0px 0px;
+            }   
             
             #home_third_section #footer #article_description label {
                 color: #5e5e69;
@@ -58,6 +62,7 @@
 #sharing_content {
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
             
             .section {
