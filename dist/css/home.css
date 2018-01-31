@@ -23,7 +23,7 @@
 }
             
 #home_second_section {
-    background: url(../images/bg_home_exercices.png) no-repeat; 
+    background: url(../images/bg_home_exercices.png) no-repeat center; 
     background-size: cover;
     margin: 10px;
     height: 110px;
@@ -50,7 +50,7 @@
 }
             
 #home_third_section #header {
-    background: url(../images/img_article.png) no-repeat;
+    background: url(../images/img_article.png) no-repeat center;
     background-size: cover;
     border-radius: 5px 5px 0px 0px;
     height: 170px;

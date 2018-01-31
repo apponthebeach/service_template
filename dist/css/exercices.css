@@ -78,6 +78,36 @@
     flex-direction: row;
 }
 
+#first_video
+{
+    background: url(../images/exercise_1.png) no-repeat center;
+    background-size: cover; 
+}
+
+#second_video
+{
+    background: url(../images/exercise_2.png) no-repeat center;
+    background-size: cover; 
+}
+
+#third_video
+{
+    background: url(../images/exercise_3.png) no-repeat center;
+    background-size: cover; 
+}
+
+#fourth_video
+{
+    background: url(../images/exercise_4.png) no-repeat center;
+    background-size: cover; 
+}
+
+#fifth_video
+{
+    background: url(../images/exercise_5.png) no-repeat center;
+    background-size: cover; 
+}
+
 .exercices_cell img {
     height: 35px;
     margin: auto 0px auto 20px;
