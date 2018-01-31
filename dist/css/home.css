@@ -6,7 +6,7 @@
 }
             
 #home_first_section {
-    background: url(../images/bg_home_wellogy_loves_workwell.png) no-repeat center;
+    background: url(../images/bg_home_wellogy_loves_workwell.jpg) no-repeat center;
     background-size: cover; 
     margin: 10px 10px 0px 10px;
     height: 100px;
@@ -23,7 +23,7 @@
 }
             
 #home_second_section {
-    background: url(../images/bg_home_exercices.png) no-repeat center; 
+    background: url(../images/bg_home_exercices.jpg) no-repeat center; 
     background-size: cover;
     margin: 10px;
     height: 110px;
