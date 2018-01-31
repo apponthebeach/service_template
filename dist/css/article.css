@@ -31,7 +31,7 @@
             
             #home_third_section #footer #article_header label {
                 color: #545f6f;
-                font-size: 28px;
+                font-size: 26px;
                 font-family: 'Wellogy-Medium';
                 margin: 0px;
                 display: block;
@@ -41,6 +41,10 @@
                 display: flex;
                 flex-direction:row;
                 margin: 15px 20px 0px 20px;
+            }
+
+            #home_third_section #footer #article_description label div {
+                margin: 10px 0px 0px 0px;
             }
             
             #home_third_section #footer #article_description label {

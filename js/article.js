@@ -40,6 +40,7 @@ function renderUI() {
         
         $.each( data, function( key, val ) {
             if (val.id === articleId) {
+                $('#header').css('background-image', 'url(' + val.i.url + ')');
                 article_content = article_content + "<div id='article_header'>";
                 article_content = article_content + "<label>"+val.t+"</label>";
                 article_content = article_content + "</div>";

@@ -2,11 +2,11 @@
   {
     "i": {
       "t": "img",
-      "url": "/images/article_about_wellogy.jpg"
+      "url": "../dist/images/article_about_wellogy.jpg"
     },
     "id": "0",
-    "t": "L'appli et les services Wellogy",
-    "c": "Wellogy propose une application ainsi que des services de Sophrologie et autres disciplines en faveur du bien être en entreprise",
+    "t": "Qu’est-ce que Wellogy&nbsp;?",
+    "c": "<div>Chez Wellogy, nous sommes convaincus que le <b>bien-être au travail</b> est un sujet global : la culture employeur, les pratiques managériales et l’aménagement de vos locaux forment un tout, propice à l’épanouissement de tout un chacun.</div><div>Afin d’appréhender ces problématiques dans leur ensemble et sur le long terme, nous avons conçu une offre de services complémentaires et adaptés aux <b>employés, aux DRH et aux dirigeants d’entreprise.</b></div><div><img width='100%' src='../dist/images/illustration_article_wellogy.png'></div>",
     "a": [
       {
         "t": "text",
@@ -17,7 +17,7 @@
   {
     "i": {
       "t": "img",
-      "url": "/images/img_article.png"
+      "url": "../dist/images/img_article.png"
     },
     "id": "1",
     "t": "Qu'est-ce que Wellogy ?",
