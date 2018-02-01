@@ -79,29 +79,12 @@
     </body>
     <script type="application/javascript">
         window.onload = function() {
-            document.getElementById("exercice_section").onclick = function() {
-                var videoPlayer = document.getElementById('wellogy_video');
-                videoPlayer.style.width = "100%";
-                videoPlayer.style.height = "100%";
-                var homeSection = document.getElementById('home');
-                homeSection.style.display = "none";
-            }
-            
             document.getElementById("menu_first_item").onclick = function() {
                 document.getElementById('menu_first_item').className = 'selected';
                 document.getElementById('menu_second_item').className = 'unselected';
                 document.getElementById('menu_third_item').className = 'unselected';
                 document.getElementById('exercice_section').className = 'section isShown';
                 document.getElementById('programme_section').className = 'section isHidden';
-                document.getElementById('coaching_section').className = 'section isHidden';
-            }
-            
-            document.getElementById("menu_second_item").onclick = function() {
-                document.getElementById('menu_first_item').className = 'unselected';
-                document.getElementById('menu_second_item').className = 'selected';
-                document.getElementById('menu_third_item').className = 'unselected';
-                document.getElementById('exercice_section').className = 'section isHidden';
-                document.getElementById('programme_section').className = 'section isShown';
                 document.getElementById('coaching_section').className = 'section isHidden';
             }
             
