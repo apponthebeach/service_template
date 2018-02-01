@@ -79,11 +79,7 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88806821-4"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-88806821-4');
+            ga('send', 'pageview', 'exercices');
         </script>
     </body>
     <script type="application/javascript">
@@ -97,6 +93,8 @@
             }
             
             document.getElementById("menu_third_item").onclick = function() {
+                //On traque le fait que l'utilisateur appuie sur le coaching
+                ga('send', 'pageview', 'coaching');
                 document.getElementById('menu_first_item').className = 'unselected';
                 document.getElementById('menu_third_item').className = 'selected';
                 document.getElementById('exercice_section').className = 'section isHidden';
