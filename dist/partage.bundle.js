@@ -17925,12 +17925,12 @@ function renderUI() {
     //UI
     var shareId = getParameterByName('sId');
     if (shareId == 1) {
-        $("<label>À qui souhaitez-vous partager l’article ?</label>").appendTo("#partage_title");
-        $("<label>Texte partagé : </label><TextArea id='email_body'>L’appli et les services Wellogy https://workwell/article…. Téléchargez l'application Wellogy : https://play.google.com/wellogy</TextArea>").appendTo("#partage_body");
+        $("<label>Partagez l'article Wellogy</label>").appendTo("#partage_title");
+        $("<label>Texte partagé : </label><div contenteditable='true' id='email_body'>Grâce à cet article, découvrez l’univers et les services Wellogy, activateur de bien être au service du développement des entreprises.<br /><br />Pour aller plus loin :<br /><br />Site internet : <a href='https://wellogy.fr' style='color:#6a78ff;'>wellogy.fr</a><br />Prise de contact : <a href='mailto:contact@wellogy.fr' style='color:#6a78ff;'>contact@wellogy.fr</a><br /><br />À bientôt !</div>").appendTo("#partage_body");
         
     } else {
-        $("<label>À qui souhaitez-vous partager l’application Wellogy ?</label>").appendTo("#partage_title");
-        $("<label>Texte partagé : </label><TextArea id='email_body'>Wellogy, l’application de Sophrologie et de bien-être qui vous accompagne au quotidien. Téléchargez l'application Wellogy : https://play.google.com/wellogy</TextArea>").appendTo("#partage_body");
+        $("<label>Partagez Wellogy</label>").appendTo("#partage_title");
+        $("<label>Texte partagé : </label><div contenteditable='true' id='email_body'>Je vous invite à découvrir l’univers et les services Wellogy, activateur de bien être au service du développement des entreprises :<br /><br />Site internet : <a href='https://wellogy.fr' style='color:#6a78ff;'>wellogy.fr</a><br />Prise de contact : <a href='mailto:contact@wellogy.fr' style='color:#6a78ff;'>contact@wellogy.fr</a><br /><br />À bientôt !</div>").appendTo("#partage_body");
     }
     
     let sharingCoachingButton = Workwell.ui.createButton("ENVOYER L'EMAIL");
