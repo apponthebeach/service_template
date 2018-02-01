@@ -17902,7 +17902,7 @@ function renderUI() {
     
     //UI
     document.getElementById("home_first_section").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=PgVrR5lZ");
+        Workwell.openWebPage(window.location.href + "../../article?aId=1");
     };
     document.getElementById("home_second_section").onclick = function() {
         Workwell.openWebPage(window.location.href + "../../exercices");

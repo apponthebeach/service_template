@@ -17,11 +17,11 @@
   {
     "i": {
       "t": "img",
-      "url": "../dist/images/img_article.png"
+      "url": "../dist/images/article_wellogy_loves_workwell.jpg"
     },
     "id": "1",
-    "t": "Qu'est-ce que Wellogy ?",
-    "c": "Wellogy propose une application ainsi que des services de Sophrologie et autres disciplines en faveur du bien être en entreprise",
+    "t": "Découverte de Wellogy",
+    "c": "<div>En tant que partenaire de Workwell, nous vous proposons d’expérimenter une version allégée de notre application : découvrez quelques-uns de nos exercices de Sophrologie, ainsi que notre coaching personnalisé dédié à la gestion du stress lors du déménagement de votre entreprise.</div><div>Pour en savoir plus sur toutes les fonctionnalités de l’application Wellogy, rendez-vous dans l’article « Qu’est-ce que Wellogy ? » ou sur notre site web : <a href='https://www.wellogy.fr' >www.wellogy.fr</a>.</div><div>Et si Wellogy vous plait, faites découvrir notre univers et nos services à vos DRH et/ou Dirigeants !</div>",
     "a": [
       {
         "t": "text",

@@ -47,6 +47,10 @@
                 margin: 20px 0px 0px 0px;
             }
 
+            #home_third_section #footer #article_description label a {
+                color: #5e5e69;
+            }
+
             #home_third_section #footer #article_description label div li {
                 margin: 10px 0px 0px 0px;
             }   
