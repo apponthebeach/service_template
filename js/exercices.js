@@ -45,13 +45,13 @@ function renderUI() {
         Workwell.openWebPage(window.location.href + "../../video?vId=asZwKFXK");
     };
     document.getElementById("third_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=6yS40hC6");
+        Workwell.openWebPage(window.location.href + "../../video?vId=xvDnyVUF");
     };
     document.getElementById("fourth_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=E3ufSerK");
+        Workwell.openWebPage(window.location.href + "../../video?vId=ingaUMZF");
     };
     document.getElementById("fifth_video").onclick = function() {
-        Workwell.openWebPage(window.location.href + "../../video?vId=3L9PTYmJ");
+        Workwell.openWebPage(window.location.href + "../../video?vId=1l6VDoCx");
     };
     
     
