@@ -108,6 +108,7 @@
     background-size: cover; 
 }
 
+
 #coaching_video_1
 {
     background: url(../images/exercise_1.jpg) no-repeat center;
@@ -351,6 +352,11 @@ button#close
 .even {
     background-color: #9ca5fe;
     color: #ffffff;
+}
+
+.last_cell {
+    margin: 10px 10px 10px 10px;
+    color: #FFFFFF;
 }
 
 #section_line {
